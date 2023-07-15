@@ -1,0 +1,350 @@
+/* All Pages Elements */
+*
+{
+    box-sizing: border-box;
+}
+img
+{
+    max-width:100%;
+}
+html
+{
+    overflow-x:hidden
+}
+body
+{
+    font-family: verdana;
+    background-color: #0f165c;
+}
+p
+{
+    font-size: 1em;
+    color: #d5b9f1;
+}
+ul
+{
+    font-size: 1em;
+    color: #d5b9f1;
+}
+.ulHeader
+{
+    font-size: 1.1em;
+    list-style: none;
+}
+h1
+{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #D4ADFC;
+}
+h2, h3, h4, h5, h6
+{
+    color: #c89ef3;
+}
+h2
+{
+    font-size: 1.75em;
+}
+h3
+{
+    font-size: 1.625em;
+}
+h4
+{
+    font-size: 1.5em;
+}
+h5
+{
+    font-size: 1.25em;
+}
+h6
+{
+    font-size: 1.125em;
+}
+a
+{
+    color: #9e6ad3;
+    font-style: underline;
+}
+a:hover
+{
+    color: #ffffff;
+}
+
+/* Index Page Elements*/
+.about
+{
+    grid-area: about;
+    margin: 3em auto 0.75em auto;
+}
+.projects
+{
+    grid-area: projects;
+    margin: 0.75em auto 0.75em auto;
+}
+.skillsHeader
+{
+    grid-area: skillsHeader;
+}
+.programming
+{
+    grid-area: programming;
+}
+.project
+{
+    grid-area: project;
+}
+.subject
+{
+    grid-area: subject;
+}
+.other
+{
+    grid-area: other;
+}
+.skills
+{
+    grid-area: skills;
+    margin: 0.75em auto 0.75em auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "skillsHeader"
+        "programming"
+        "project"
+        "subject"
+        "other";
+}
+.exp
+{
+    grid-area: exp;
+    margin: 0.75em auto 0.75em auto;
+}
+.educationHeader
+{
+    grid-area: edHeader;
+}
+.hs
+{
+    grid-area: hs;
+}
+.ud
+{
+    grid-area: ud;
+}
+.education
+{
+    grid-area: education;
+    margin: 0.75em auto 0.75em auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "edHeader"
+        "hs"
+        "ud";
+}
+.awardHeader
+{
+    grid-area: awardHeader;
+}
+.csAward
+{
+    grid-area: csAward;
+}
+.englishAward
+{
+    grid-area: englishAward;
+}
+.aiHonor
+{
+    grid-area: aiHonor;
+}
+.awards
+{
+    grid-area: awards;
+    margin: 0.75em auto 3em auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "awardHeader"
+        "csAward"
+        "englishAward"
+        "aiHonor";
+}
+.about, .projects, .skills, .exp, .education, .awards
+{
+    border: 0.240625em solid #01020f;
+    border-radius: 0.9375em;
+    background-color: #5156978c;
+    padding: 0.32em;
+    width: 90%;
+    height: auto;
+}
+.nestedMain
+{
+    grid-area: main;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "about"
+        "skills"
+        "projects"
+        "exp"
+        "education"
+        "awards";
+}
+
+footer
+{
+    border: 0.240625em solid #01020f;
+    border-radius: 0.9375em;
+    background-color: #5156978c;
+    grid-area: footer;
+    text-align: center;
+    width: 95%;
+    margin: auto;
+}
+
+/* Mobile View */
+.container1 /* Used for index.html */
+{
+    background-image: linear-gradient(to bottom right, #1D267D, #0C134F);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap:.5em;
+    margin: 0.25em 0;
+    grid-template-areas:
+        "main"
+        "footer";
+}
+
+/* Tablet View */
+@media only screen and (min-width: 480px)
+{
+    .skills
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "skillsHeader skillsHeader"
+            "programming project"
+            "subject other";
+    }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 960px)
+{
+    .skills
+    {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "skillsHeader skillsHeader skillsHeader skillsHeader"
+            "programming project subject other";
+    }
+    .education
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "edHeader edHeader"
+            "hs ud";
+    }
+    .about, .projects, .skills, .exp, .education, .awards
+    {
+        font-size: 1.5em;
+        width: 85%;
+    }
+
+    .footer
+    {
+        font-size: 1.5em;
+        width: 95%;
+    }
+}
+
+/* Desktop View 2 */
+@media only screen and (min-width: 1300px)
+{
+    .about, .projects, .skills, .exp, .education, .awards
+    {
+        font-size: 2em;
+        width: 80%;
+    }
+    .footer
+    {
+        font-size: 2em;
+    }
+}
+
+/* Desktop View 3 */
+@media only screen and (min-width: 1800px)
+{
+    .about, .projects, .skills, .exp, .education, .awards
+    {
+        font-size: 2.5em;
+    }
+    .footer
+    {
+        font-size: 2.5em;
+    }
+}
+
+/* Desktop View 4 */
+@media only screen and (min-width: 2000px)
+{
+    .about, .projects, .skills, .exp, .education, .awards
+    {
+        font-size: 3em;
+    }
+    .footer
+    {
+        font-size: 3em;
+    }
+}
+
+/* Desktop View 5 */
+@media only screen and (min-width: 3000px)
+{
+    .about, .projects, .skills, .exp, .education, .awards
+    {
+        font-size: 4em;
+    }
+    .footer
+    {
+        font-size: 4em;
+    }
+}
+
+/* Desktop View 6 */
+@media only screen and (min-width: 4000px)
+{
+    .about, .projects, .skills, .exp, .education, .awards
+    {
+        font-size: 6em;
+    }
+    .footer
+    {
+        font-size: 6em;
+    }
+}
+
+/* Desktop View 7 */
+@media only screen and (min-width: 5000px)
+{
+    .about, .projects, .skills, .exp, .education, .awards
+    {
+        font-size: 8em;
+    }
+    .footer
+    {
+        font-size: 8em;
+    }
+}
