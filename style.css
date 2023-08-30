@@ -164,6 +164,10 @@ a:hover
 {
     grid-area: aiHonor;
 }
+.droneAward
+{
+    grid-area: droneAward;
+}
 .awards
 {
     grid-area: awards;
@@ -176,7 +180,8 @@ a:hover
         "awardHeader"
         "csAward"
         "englishAward"
-        "aiHonor";
+        "aiHonor"
+        "droneAward";
 }
 .about, .projects, .skills, .exp, .education, .awards
 {
